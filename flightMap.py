@@ -2,7 +2,6 @@ from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 from opensky_api import OpenSkyApi
 import time
-from PIL import Image
 import ctypes
 import os
 import subprocess
@@ -28,8 +27,6 @@ def getFlights(bbox):
 
     return states
 
-
-center = (LON, LAT)
 
 minLat = LAT - 1
 maxLat = LAT + 1
