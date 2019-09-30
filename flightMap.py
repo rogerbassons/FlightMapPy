@@ -87,7 +87,9 @@ while True:
     
     path = os.path.abspath("wallpaper.png")
     try:
-        ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
+        import win32con
+        changed = win32con.SPIF_UPDATEINIFILE | win32con.SPIF_SENDCHANGE
+        ctypes.windll.user32.SystemParametersInfoW(win32con.SPI_SETDESKWALLPAPER,0,path,changed)
     except:
         subprocess.run(["feh", "--bg-fill", path])
 
