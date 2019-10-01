@@ -1,2 +1,4 @@
-# flight-radar
-Set flights ADS-B as wallpaper
+# FlightMapPy
+
+ADS-B flights data from OpenSky network as live wallpaper.
+
